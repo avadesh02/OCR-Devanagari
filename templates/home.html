@@ -1,0 +1,13 @@
+<html>
+	<center><head>
+		WELCOME TO HOME PAGE 
+	</head></center>
+
+	<p>Please upload the image u want to convert </p>
+	<div id = "upload_image">
+		<form action="{{url_for('get_image')}}" method = "POST" enctype="multipart/form-data">
+			<input type="file" id ="pic" name="page" accept="image/*">
+			<input type="submit" value="convert">
+		</form>
+	</div>
+</html>
