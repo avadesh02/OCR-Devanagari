@@ -187,7 +187,7 @@ class letter_finder:
 		#to correct errors like gha, sha, na
 		#print('len',len(letter_matrix))
 		for first,second in zip(letter_matrix,letter_matrix[1:]):
-			if second - first < 55:
+			if second - first < 65:
 				letter_matrix.remove(first)
 		#print('letters have been found')
 		#print(letter_matrix)
