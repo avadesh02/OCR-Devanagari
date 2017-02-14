@@ -236,7 +236,7 @@ class letter_finder:
 		#self.show_image()
 ##################################test functions below###########################
 
-#img = 'test/20.png'
+#img = 'test/29.png'
 #image = letter_finder(img)
 #image.store_cropped_letters(0)
 #y = image.find_line()
