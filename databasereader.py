@@ -12,6 +12,7 @@ else:
 #dev_letter_db = pickle.load(open("data/dev_letter_db" + str(i) + ".p","rb"))
 #dev_letter_db = pickle.load(open("data/dev_letter_db" + str(z) +  ".p","rb"))
 dev_letter_db = pickle.load(open("data/dev_letter_D" +  ".p","rb"))
+#dev_letter_db = pickle.load(open("./test_data" +  ".p","rb"))
 
 def show_dataset(i):
 	print(dev_letter_db[i][1])
@@ -54,8 +55,9 @@ def find_no_in_same_class_index(i):
 		if data[1] == i:
 			count += 1
 
-	print count
-	print ('class is:' + class_index[i]) 
+	#print count
+	#print ('class is:' + class_index[i]) 
+	return count
 
 def find_count_by_name(z):
 	class_index = pickle.load(open('data/class_index.p',"rb"))
@@ -72,6 +74,20 @@ def info_db():
 	class_index = pickle.load(open('data/class_index.p',"rb"))
 	print('Number of classes is:'+ str(len(class_index)))
 	print('size of database is :' + str(len(dev_letter_db)))
+
+def print_class_index():
+	class_index = pickle.load(open('data/class_index.p',"rb"))
+	print class_index	
+
+def count_dic_generator():
+	print('finding count .....')	
+	class_count = {}
+	class_index = pickle.load(open('data/class_index.p',"rb"))
+	for i in range(len(class_index)):
+		count = find_no_in_same_class_index(i)
+		class_count[i] = count
+	print('done...')
+	pickle.dump(class_count,open('data/class_count.p','wb')) 
 
 #d1 = pickle.load(open("data/dev_letter_db0.p","rb"))
 #d2 = pickle.load(open("data/dev_letter_db1.p","rb"))
@@ -96,3 +112,7 @@ elif z == "countbyindex":
 	find_no_in_same_class_index(i)	
 elif z == "countbyname":
 	find_count_by_name(i)
+elif z== "printclassindex":
+	print_class_index()
+elif z== "create_count_dict":
+	count_dic_generator()

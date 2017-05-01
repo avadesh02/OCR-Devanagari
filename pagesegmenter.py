@@ -159,7 +159,7 @@ class letter_finder:
 
 	def show_letters(self):
 		for i in range(0,len(self.letter_matrix)-2):
-			cv2.rectangle(self.img,(self.letter_matrix[i],0),(self.letter_matrix[i+1],self.cols),0,2)
+			cv2.rectangle(self.img,(self.letter_matrix[i],0),(self.letter_matrix[i+1],self.cols),0,4)
 		#print('letters are drawn')		
 
 	def count_region(self,count_matrix,pos,r):
@@ -236,18 +236,23 @@ class letter_finder:
 		#self.show_image()
 ##################################test functions below###########################
 
-#img = 'test/29.png'
+#img = 'words/25.png'
+#im = cv2.imread(img,0)
+#im = cv2.resize(im,(0,0),fx=5,fy=5)
+#cv2.imshow('t',im)
+#cv2.waitKey()
 #image = letter_finder(img)
 #image.store_cropped_letters(0)
 #y = image.find_line()
 #image.remove_line(y)
 #image.find_letters(0,0,image.cols,image.final_image.shape[0])
 #image.show_letters()
-#image.show_image()
+#image.show_cropped_image()
+#image.plot_intensity()
 #image.crop_letters()
-
-#img = '1996January/19.jpg' 
+#image.show_cropped_image()
+#img = './page/test' 
 #image = word_finder(img)
 #image.segment_page_into_words()
-
+#image.store_cropped_letters(0#)
 

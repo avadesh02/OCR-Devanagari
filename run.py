@@ -201,7 +201,7 @@ def segment_words_prediction():
 	session['no_words'] = session['start'] + 25
 	return redirect(url_for('show_predictions'))	
 
-from test_model import make_prediction
+from test_model import make_prediction,predictor
 
 @app.route('/show/predictions',methods = ['GET','POST'])
 def show_predictions():
@@ -210,15 +210,16 @@ def show_predictions():
 	letters = os.listdir('./letters')
 	print('predicitng output')
 	#for i in range(session['start'],session['no_words']):
-	for i in range(0,25):
+	for i in range(0,15):
 		prediction_array.append([])
 		for j in range(session['label_array'][i]):
 			let = './letters/' + str(i) + str(j) +  '.png'
 			print(let)
 			img = cv2.imread(let)
 			pred = make_prediction(img)
+			pred = predictor(img)
 			prediction_array[i].append(pred)		
-	return render_template('prediction.html',label_array = session['label_array'],prediction_array = prediction_array,start = 0,end = 25) 
+	return render_template('prediction.html',label_array = session['label_array'],prediction_array = prediction_array,start = 0,end = 15) 
 
 
 @app.route('/uploads/<filename>')
@@ -235,7 +236,7 @@ def upload_page(filename):
 
 
 if __name__ == '__main__':
-	#app.run(debug=True)
+#	app.run(debug=True)
 	app.run()
 
 

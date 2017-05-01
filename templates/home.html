@@ -10,4 +10,10 @@
 			<input type="submit" value="convert">
 		</form>
 	</div>
+	<div id = "upload_image_prediction">
+		<form action="{{url_for('get_image_prediction')}}" method = "POST" enctype="multipart/form-data">
+			<input type="file" id ="pic" name="page" accept="image/*">
+			<input type="submit" value="convert">
+		</form>
+	</div>
 </html>
