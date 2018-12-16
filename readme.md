@@ -1,10 +1,14 @@
-This project is focused on developing an OCR for Devanigiri Script(Samskritam text). This will help in Digitization of all the ancient material, and will also facilitate searches and tagging of text.
+#Optical Character Recognition for Sanskrit Using Convolution Neural Networks
+
+This project aims to develop an OCR for Devanagari Script(Samskritam text). This will help in Digitization of all the ancient material, and will also facilitate searches and tagging of text.
+
+# Running the software
 
 To Run the software CLONE The repository. Type "python run.py" on your terminal. This will allow the software to run on your local server.
 
-# Please NOTE:
+# NOTE:
 
-The OCR software is being refactored and migrated another repository as a part of the Devdigitizer Project. Please take a look at the SanskritOCR repo for the updated OCR code.
+The OCR software is being migrated to another repository as a part of the Devdigitizer Project. Please take a look at the SanskritOCR repo for the updated OCR code.
 
 # Citing the SanskritOCR Project
 
