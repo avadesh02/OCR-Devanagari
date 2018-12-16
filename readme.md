@@ -9,7 +9,7 @@ To Run the software Clone The repository and type "python run.py" on your termin
 
 # NOTE:
 
-The OCR software is being migrated to another repository as a part of the Devdigitizer Project. Please take a look at the SanskritOCR repo for the updated OCR code.
+The OCR software has been migrated to another repository as a part of the DevDigitizer Project. Please take a look at the SanskritOCR repo for the up to date OCR code.
 
 # Citing the SanskritOCR Project
 
