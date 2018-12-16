@@ -1,10 +1,11 @@
-#Optical Character Recognition for Sanskrit Using Convolution Neural Networks
+# Optical Character Recognition for Sanskrit Using Convolution Neural Networks
 
 This project aims to develop an OCR for Devanagari Script(Samskritam text). This will help in Digitization of all the ancient material, and will also facilitate searches and tagging of text.
 
 # Running the software
 
-To Run the software CLONE The repository. Type "python run.py" on your terminal. This will allow the software to run on your local server.
+To Run the software Clone The repository and type "python run.py" on your terminal. This will run the software on your local server using python flask. 
+
 
 # NOTE:
 
